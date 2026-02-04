@@ -56,6 +56,38 @@
           background: rgb(185, 85, 85);
       }
 
+      /* Abstract-Overview carousel styling */
+      #abstract-overview-carousel .splide__arrow {
+          background: rgba(50, 115, 220, 0.9);
+          width: 3rem;
+          height: 3rem;
+          opacity: 0.7;
+          transition: all 0.3s ease;
+      }
+      #abstract-overview-carousel .splide__arrow:hover {
+          opacity: 1;
+          transform: scale(1.1);
+      }
+      #abstract-overview-carousel .splide__arrow svg {
+          fill: white;
+          width: 1.2rem;
+          height: 1.2rem;
+      }
+      #abstract-overview-carousel .splide__pagination {
+          bottom: -2rem;
+      }
+      #abstract-overview-carousel .splide__pagination__page {
+          background: #ccc;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          transition: all 0.3s ease;
+      }
+      #abstract-overview-carousel .splide__pagination__page.is-active {
+          background: #3273dc;
+          transform: scale(1.3);
+      }
+
       /* Ensure videos are displayed side by side */
       .splide__slide {
           padding: 0 10px; /* Add some space between slides */
@@ -127,8 +159,8 @@
   </style>
 </head>
 <body>
-  <section class="hero" style="padding-top: 2%;">
-    <div class="hero-body">
+  <section class="hero" style="padding-top: 1%;">
+    <div class="hero-body" style="padding-bottom: 0.5rem;">
       <div class="container is-max-desktop" style="width: 100%; margin: 0 auto; display: flex; justify-content: center;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -157,7 +189,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2505.19017" target=""
+                        <a href="" target=""
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -165,17 +197,6 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -188,17 +209,17 @@
                     </a>
                   </span>
 
-
                 <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://www.arxiv.org/abs/2505.19017" target="_blank"
+                <span class="link-block">
+                  <a href="" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
+              
             </div>
           </div>
         </div>
@@ -250,9 +271,9 @@
 
 
 <!-- Introduction Video -->
-<section class="hero" style="padding: 2% 0;">
+<section class="hero" style="padding: 0;">
   <div class="container is-max-desktop">
-    <div class="hero-body" style="padding: 0;">
+    <div class="hero-body" style="padding: 0.5rem 0;">
       <video id="intro-video" autoplay controls muted loop playsinline style="width: 100%; border-radius: 8px;">
         <source src="static2/videos/demo.mp4" type="video/mp4">
       </video>
@@ -261,51 +282,73 @@
 </section>
 <!-- End introduction video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Evaluating generalist robot manipulation policies is costly and difficult to scale in the real world. While emerging world models (e.g., WorldEval, Ctrl-World) offer a promising alternative, the reliability of such evaluation remains a critical bottleneck. 
-            Specifically, their visual predictions can undermine policy assessment by "self-correcting" failures into false positives or yielding artifacts under out-of-distribution controls.
-            Even with failure-enriched data, current architectures struggle to capture action-causal dynamics, as they typically treat actions as passive conditions rather than causal drivers.
-            To address this, we propose dWorldEval, an action-centric discrete-diffusion world model that maps visual observations, language instructions, and action chunks into a shared unified token space and denoises them with a single self-attention backbone where actions function as first-class tokens. 
-            To realize reliable policy-world interaction, dWorldEval introduces a sparse keyframe memory that anchors global scene state while preserving fine-grained multi-view interaction cues, and leverages Progress-as-text to jointly generate future observations and success indicators.
-            Extensive experiments on LIBERO, RoboTwin, and real-robot tasks demonstrate that dWorldEval significantly outperforms video diffusion baselines in action controllability, stabilizes long-horizon multi-view rollouts, enabling accurate policy ranking via automatic success estimation.
-          </p>
-        </div>
+<!-- Abstract & Overview Carousel -->
+<section class="section" style="padding: 3.5rem 1.5rem; margin: 1.5rem 0; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);">
+  <div class="container" style="max-width: 900px;">
+    <div id="abstract-overview-carousel" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <!-- Slide 1: Abstract -->
+          <li class="splide__slide">
+            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
+              <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
+                <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Abstract</span>
+              </h2>
+              <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; color: #4a4a4a;">
+                <p>
+                  Evaluating generalist robot manipulation policies is costly and difficult to scale in the real world. While emerging world models (e.g., WorldEval, Ctrl-World) offer a promising alternative, the reliability of such evaluation remains a critical bottleneck.
+                  Specifically, their visual predictions can undermine policy assessment by "self-correcting" failures into false positives or yielding artifacts under out-of-distribution controls.
+                  Even with failure-enriched data, current architectures struggle to capture action-causal dynamics, as they typically treat actions as passive conditions rather than causal drivers.
+                  To address this, we propose <strong>dWorldEval</strong>, an action-centric discrete-diffusion world model that maps visual observations, language instructions, and action chunks into a shared unified token space and denoises them with a single self-attention backbone where actions function as first-class tokens.
+                  To realize reliable policy-world interaction, dWorldEval introduces a sparse keyframe memory that anchors global scene state while preserving fine-grained multi-view interaction cues, and leverages Progress-as-text to jointly generate future observations and success indicators.
+                  Extensive experiments on LIBERO, RoboTwin, and real-robot tasks demonstrate that dWorldEval significantly outperforms video diffusion baselines in action controllability, stabilizes long-horizon multi-view rollouts, enabling accurate policy ranking via automatic success estimation.
+                </p>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 2: Overview -->
+          <li class="splide__slide">
+            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
+                <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Overview</span>
+              </h2>
+              <img src="static2/images/head.png" alt="overview" style="width: 90%; max-width: 750px; border-radius: 0.5rem;">
+              <p class="has-text-centered" style="margin-top: 1rem; color: #666; font-size: 0.95rem;">Architecture of dWorldEval</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-<!-- Teaser video-->
-<section class="hero teaser" style="padding: 1%;">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static2/images/head.png" alt="overview" style="width: 75%; display: block; margin: 0 auto;">
-      <h2 class="subtitle has-text-centered">Overview of dWorldEval
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#abstract-overview-carousel', {
+      type: 'loop',
+      perPage: 1,
+      autoplay: true,
+      interval: 8000,
+      pauseOnHover: true,
+      pagination: true,
+      arrows: true,
+      speed: 800,
+      easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+    }).mount();
+  });
+</script>
+<!-- End Abstract & Overview Carousel -->
 
 
 <div class="mt-8 md:ml-0 ml-1 text-left">
   <div style="text-align: center;">
-    <h2 class="title is-3">Visualization of Real-World Robot Policy and Generated Video Policy</h2>
+    <h2 class="title is-3">Real Execution vs. World Model Rollouts</h2>
 
     <!-- LIBERO Section -->
     <h3 class="title is-8" style="color: rgb(140, 143, 144);">1. LIBERO Tasks</h3>
   </div>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1rem; padding: 1rem; max-width: 64%; margin: 0 auto;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1rem; padding: 1rem; max-width: 62%; margin: 0 auto;">
     <!-- LIBERO Example 1 -->
     <div style="flex: 0 0 48%; border: 1px solid #e0e0e0; border-radius: 0.5rem; padding: 0.5rem;">
       <div style="background-color: #f0fdf4; border-radius: 0.5rem; padding: 0.5rem; margin-bottom: 0.5rem; text-align: center;">
@@ -793,15 +836,16 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{li2025worldevalworldmodelrealworld,
+    <!-- <pre><code>
+      @misc{li2025worldevalworldmodelrealworld,
       title={WorldEval: World Model as Real-World Robot Policies Evaluator}, 
       author={Yaxuan Li and Yichen Zhu and Junjie Wen and Chaomin Shen and Yi Xu},
       year={2025},
       eprint={2505.19017},
       archivePrefix={arXiv},
       primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2505.19017}, 
-}</code></pre>
+      url={https://arxiv.org/abs/2505.19017}, }
+    </code></pre> -->
   </div>
 </section>
 
