@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -26,15 +27,13 @@
 
   <title>WorldEval: World Model as Real-World Robot Policies Evaluator</title>
   <link rel="icon" type="image/x-icon" href="static/images/eva.svg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,1011 +43,1313 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
-    <!-- Splide CSS -->
+  <!-- Splide CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/css/splide.min.css">
 
   <style>
-      /* Splide pagination customization */
-      .splide__pagination__page {
-          background: rgb(51, 51, 51);
-      }
-      .splide__pagination__page.is-active {
-          background: rgb(185, 85, 85);
-      }
+    /* Splide pagination customization */
+    .splide__pagination__page {
+      background: rgb(51, 51, 51);
+    }
 
-      /* Abstract-Overview carousel styling */
-      #abstract-overview-carousel .splide__arrow {
-          background: rgba(50, 115, 220, 0.9);
-          width: 3rem;
-          height: 3rem;
-          opacity: 0.7;
-          transition: all 0.3s ease;
-      }
-      #abstract-overview-carousel .splide__arrow:hover {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-      #abstract-overview-carousel .splide__arrow svg {
-          fill: white;
-          width: 1.2rem;
-          height: 1.2rem;
-      }
-      #abstract-overview-carousel .splide__pagination {
-          bottom: -2rem;
-      }
-      #abstract-overview-carousel .splide__pagination__page {
-          background: #ccc;
-          width: 10px;
-          height: 10px;
-          margin: 0 5px;
-          transition: all 0.3s ease;
-      }
-      #abstract-overview-carousel .splide__pagination__page.is-active {
-          background: #3273dc;
-          transform: scale(1.3);
-      }
+    .splide__pagination__page.is-active {
+      background: rgb(185, 85, 85);
+    }
 
-      /* Results carousel styling */
-      #results-carousel .splide__arrow {
-          background: rgba(50, 115, 220, 0.9);
-          width: 3rem;
-          height: 3rem;
-          opacity: 0.7;
-          transition: all 0.3s ease;
-      }
-      #results-carousel .splide__arrow:hover {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-      #results-carousel .splide__arrow svg {
-          fill: white;
-          width: 1.2rem;
-          height: 1.2rem;
-      }
-      #results-carousel .splide__pagination {
-          bottom: -2rem;
-      }
-      #results-carousel .splide__pagination__page {
-          background: #ccc;
-          width: 10px;
-          height: 10px;
-          margin: 0 5px;
-          transition: all 0.3s ease;
-      }
-      #results-carousel .splide__pagination__page.is-active {
-          background: #3273dc;
-          transform: scale(1.3);
-      }
-      #results-carousel .splide__slide {
-          padding: 1rem 0;
-      }
-      #results-carousel .splide__track {
-          overflow: visible;
-      }
-      section.hero.teaser {
-          overflow: visible;
-          height: auto;
-      }
+    /* Abstract-Overview carousel styling */
+    #abstract-overview-carousel .splide__arrow {
+      background: rgba(50, 115, 220, 0.9);
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
 
-      /* Video Card Styling */
-      .video-card {
-          background: white;
-          border: none;
-          border-radius: 1rem;
-          padding: 0;
-          overflow: hidden;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-          transition: all 0.3s ease;
-      }
-      .video-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-      }
-      .video-card .instruction-header {
-          background: #f5f5f5;
-          color: #333;
-          padding: 0.8rem 1rem;
-          font-weight: 600;
-          font-size: 0.9rem;
-          text-align: center;
-          line-height: 1.4;
-      }
-      .video-card .instruction-header.libero {
-          background: #f0fdf4;
-      }
-      .video-card .instruction-header.robotwin {
-          background: #eff6ff;
-      }
-      .video-card .instruction-header.realworld {
-          background: #fefce8;
-      }
-      .video-card .video-section {
-          padding: 0.8rem;
-      }
-      .video-card .section-label {
-          display: flex;
-          align-items: center;
-          margin-bottom: 0.5rem;
-          font-size: 0.75rem;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-      }
-      .video-card .section-label.real {
-          color: #2563eb;
-      }
-      .video-card .section-label.real::before {
-          content: '';
-          display: inline-block;
-          width: 4px;
-          height: 14px;
-          background: #2563eb;
-          border-radius: 2px;
-          margin-right: 6px;
-      }
-      .video-card .section-label.gen {
-          color: #dc2626;
-      }
-      .video-card .section-label.gen::before {
-          content: '';
-          display: inline-block;
-          width: 4px;
-          height: 14px;
-          background: #dc2626;
-          border-radius: 2px;
-          margin-right: 6px;
-      }
-      .video-card .video-row {
-          display: flex;
-          gap: 0.4rem;
-          margin-bottom: 0.6rem;
-      }
-      .video-card .video-item {
-          flex: 1;
-          position: relative;
-          border-radius: 0.5rem;
-          overflow: hidden;
-      }
-      .video-card .video-item video {
-          width: 100%;
-          display: block;
-      }
-      .video-card .video-badge {
-          position: absolute;
-          top: 0.3rem;
-          left: 0.3rem;
-          background: rgba(0,0,0,0.5);
-          color: white;
-          font-size: 0.65rem;
-          padding: 0.2rem 0.5rem;
-          border-radius: 0.25rem;
-          backdrop-filter: blur(4px);
-      }
-      .video-card .video-badge.real-badge {
-          background: rgba(96, 165, 250, 0.85);
-      }
-      .video-card .video-badge.gen-badge {
-          background: rgba(248, 113, 113, 0.85);
-      }
+    #abstract-overview-carousel .splide__arrow:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
 
-      /* Ensure videos are displayed side by side */
-      .splide__slide {
-          padding: 0 10px; /* Add some space between slides */
-      }
+    #abstract-overview-carousel .splide__arrow svg {
+      fill: white;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
 
-      .video-container {
-          position: relative;
-      }
+    #abstract-overview-carousel .splide__pagination {
+      bottom: -2rem;
+    }
 
-      .speed-label {
-          position: absolute;
-          bottom: 0.5rem;
-          right: 1rem;
-          background: rgba(255, 255, 255, 0.85);
-          color: #4a4a4a;
-          padding: 0.5rem;
-          border-radius: 0.5rem;
-      }
+    #abstract-overview-carousel .splide__pagination__page {
+      background: #ccc;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
 
-      /* Container width control */
-      #container {
-          max-width: 90%;
-          margin: auto;
-      }
+    #abstract-overview-carousel .splide__pagination__page.is-active {
+      background: #3273dc;
+      transform: scale(1.3);
+    }
+
+    /* Results carousel styling */
+    #results-carousel .splide__arrow {
+      background: rgba(50, 115, 220, 0.9);
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    #results-carousel .splide__arrow:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    #results-carousel .splide__arrow svg {
+      fill: white;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    #results-carousel .splide__pagination {
+      bottom: -2rem;
+    }
+
+    #results-carousel .splide__pagination__page {
+      background: #ccc;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      transition: all 0.3s ease;
+    }
+
+    #results-carousel .splide__pagination__page.is-active {
+      background: #3273dc;
+      transform: scale(1.3);
+    }
+
+    #results-carousel .splide__slide {
+      padding: 1rem 0;
+    }
+
+    #results-carousel .splide__track {
+      overflow: visible;
+    }
+
+    section.hero.teaser {
+      overflow: visible;
+      height: auto;
+    }
+
+    /* Video Card Styling */
+    .video-card {
+      background: white;
+      border: none;
+      border-radius: 1rem;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-card .instruction-header {
+      background: #f5f5f5;
+      color: #333;
+      padding: 0.8rem 1rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .video-card .instruction-header.libero {
+      background: #f0fdf4;
+    }
+
+    .video-card .instruction-header.robotwin {
+      background: #eff6ff;
+    }
+
+    .video-card .instruction-header.realworld {
+      background: #fefce8;
+    }
+
+    .video-card .video-section {
+      padding: 0.8rem;
+    }
+
+    .video-card .section-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .video-card .section-label.real {
+      color: #2563eb;
+    }
+
+    .video-card .section-label.real::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background: #2563eb;
+      border-radius: 2px;
+      margin-right: 6px;
+    }
+
+    .video-card .section-label.gen {
+      color: #dc2626;
+    }
+
+    .video-card .section-label.gen::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      background: #dc2626;
+      border-radius: 2px;
+      margin-right: 6px;
+    }
+
+    .video-card .video-row {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .video-card .video-item {
+      flex: 1;
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .video-card .video-item video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-card .video-badge {
+      position: absolute;
+      top: 0.3rem;
+      left: 0.3rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 0.65rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .video-card .video-badge.real-badge {
+      background: rgba(96, 165, 250, 0.85);
+    }
+
+    .video-card .video-badge.gen-badge {
+      background: rgba(248, 113, 113, 0.85);
+    }
+
+    /* Ensure videos are displayed side by side */
+    .splide__slide {
+      padding: 0 10px;
+      /* Add some space between slides */
+    }
+
+    .video-container {
+      position: relative;
+    }
+
+    .speed-label {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 1rem;
+      background: rgba(255, 255, 255, 0.85);
+      color: #4a4a4a;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    /* Container width control */
+    #container {
+      max-width: 90%;
+      margin: auto;
+    }
 
 
-      video, img {
-          width: 100%;
-          border-radius: 8px;
-      }
-      .wrapper {
-	position: relative;  /* 固定在屏幕上，滚动时不动 */
-	top: 0%;         /* 垂直居中 */
-	left: 40%;        /* 水平居中 */
-	transform: translate(-50%, -50%); /* 调整位置，使得真正居中 */
-	width: 300px;     /* 可以根据需求调整宽度 */
-	padding: 20px;    /* 内边距，给内容一些空间 */
-}
+    video,
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
 
-.collapsed {
-	height: 8rem;
-}
+    .wrapper {
+      position: relative;
+      /* 固定在屏幕上，滚动时不动 */
+      top: 0%;
+      /* 垂直居中 */
+      left: 40%;
+      /* 水平居中 */
+      transform: translate(-50%, -50%);
+      /* 调整位置，使得真正居中 */
+      width: 300px;
+      /* 可以根据需求调整宽度 */
+      padding: 20px;
+      /* 内边距，给内容一些空间 */
+    }
 
-.collapsed h1 {
-	padding-top: 200%;
-}
-.text-container {
-	position: relative;
-	font-family: 'Arial', sans-serif;
-	font-size: 150px;
-	font-weight: bold;
-	color: #2d2d2d; /* 深灰色 */
-	width: 70%;
-	white-space: nowrap;
-	text-align: center;
-}
+    .collapsed {
+      height: 8rem;
+    }
 
-.text-container .text {
-	position: relative;
-	color: #2d2d2d; /* 深灰色，统一样式 */
-}
+    .collapsed h1 {
+      padding-top: 200%;
+    }
 
-/* 隐藏多余的层 */
-.text-container .text-2,
-.text-container .text-3 {
-	display: none;
-}
+    .text-container {
+      position: relative;
+      font-family: 'Arial', sans-serif;
+      font-size: 150px;
+      font-weight: bold;
+      color: #2d2d2d;
+      /* 深灰色 */
+      width: 70%;
+      white-space: nowrap;
+      text-align: center;
+    }
 
+    .text-container .text {
+      position: relative;
+      color: #2d2d2d;
+      /* 深灰色，统一样式 */
+    }
+
+    /* 隐藏多余的层 */
+    .text-container .text-2,
+    .text-container .text-3 {
+      display: none;
+    }
   </style>
 </head>
+
 <body>
   <section class="hero" style="padding-top: 1%;">
     <div class="hero-body" style="padding-bottom: 0.5rem;">
-      <div class="container is-max-desktop" style="width: 100%; margin: 0 auto; display: flex; justify-content: center;">
+      <div class="container is-max-desktop"
+        style="width: 100%; margin: 0 auto; display: flex; justify-content: center;">
         <div class="columns is-centered">
           <div class="column has-text-centered">
 
             <h1 class="title is-1 publication-title">
-              <span style="font-weight: bold;">dWorldEval:</span> Scaling Robot Policy Evaluation
-  via Discrete Diffusion World Model
+              <span style="font-weight: bold;">dWorldEval:</span> Scalable Robotic Policy Evaluation
+              via Discrete Diffusion World Model
             </h1>
-              <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+
+            <div class="is-size-5 publication-authors">
               <span class="px-2">Yaxuan Li<sup>1</sup></span>
               <span class="px-2">Zhongyi Zhou<sup>1</sup></span>
               <span class="px-2">Yefei Chen<sup>1</sup></span>
-              <span class="px-2">Weibin Meng<sup>2</sup></span>
-              <span class="px-2">Linfeng Zhang<sup>3</sup></span>
-              <br>
-              <span class="px-2">Yaxin Peng<sup>4</sup></span>
-              <span class="px-2">Chaomin Shen<sup>1</sup></span>
-              <span class="px-2">Yichen Zhu<sup>5,&dagger;</sup></span>
-              </div>
-              <div class="is-size-6" style="margin-top: 0.5rem; color: #666;">
-                <span> &dagger; Corresponding author.</span>
-              </div>
+              <span class="px-2">Yaokai Xue<sup>1</sup></span>
+              <span class="px-2">Yichen Zhu<sup>2</sup></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors" style="margin-top: 0.8rem;">
-                    <span style="color: rgb(145, 143, 143);" class="px-3"><sup>1</sup>East China Normal University</span>
-                    <span style="color: rgb(145, 143, 143);" class="px-3"><sup>2</sup>Tsinghua University</span>
-                    <span style="color: rgb(145, 143, 143);" class="px-3"><sup>3</sup>Shanghai Jiaotong University</span>
-                    <br>
-                    <span style="color: rgb(145, 143, 143);" class="px-3"><sup>4</sup>Shanghai University</span>
-                    <span style="color: rgb(145, 143, 143);" class="px-3"><sup>5</sup>University of Toronto</span>
-                  </div>
+            <div class="is-size-5 publication-authors" style="margin-top: 0.8rem;">
+              <span style="color: rgb(145, 143, 143);" class="px-3"><sup>1</sup>Current Robotics</span>
+              <span style="color: rgb(145, 143, 143);" class="px-3"><sup>2</sup>University of Toronto</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="" target=""
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                  <!-- Github link -->
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/liyaxuanliyaxuan/Worldeval"
-                       class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                            <i class="fab fa-github"></i>
-                        </span>
-                        <span>code</span>
-                    </a>
-                  </span> -->
-
-                <!-- ArXiv abstract Link -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <span class="link-block">
-                  <a href="" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                  <a href="" target="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      new Splide('#container', {
-          perPage: 3, // Show 3 videos per view
-          perMove: 1,
-          autoplay: true,
-          rewind: true,
-          interval: 10000,
-          pagination: true, // Enable pagination
-          arrows: true, // Enable navigation arrows
-          breakpoints: {
-              768: {
-                  perPage: 1 // On small screens, show 1 video per view
-              }
-          }
-      }).mount();
-  });
-</script>
-
-<!-- Splide JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      new Splide('#container', {
-          perPage: 3, // Show 3 videos per view
-          perMove: 1,
-          autoplay: true,
-          rewind: true,
-          interval: 10000,
-          breakpoints: {
-              768: {
-                  perPage: 1 // On small screens, show 1 video per view
-              }
-          }
-      }).mount();
-  });
-</script>
-
-
-<!-- Introduction Video -->
-<section class="hero" style="padding: 0;">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="padding: 0.5rem 0;">
-      <video id="intro-video" autoplay controls muted loop playsinline style="width: 100%; border-radius: 8px;">
-        <source src="static2/videos/demo.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-<!-- End introduction video -->
-
-<!-- Abstract & Overview Carousel -->
-<section class="section" style="padding: 3.5rem 1.5rem; margin: 1.5rem 0; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);">
-  <div class="container" style="max-width: 900px;">
-    <div id="abstract-overview-carousel" class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <!-- Slide 1: Abstract -->
-          <li class="splide__slide">
-            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
-              <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
-                <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Abstract</span>
-              </h2>
-              <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; color: #4a4a4a;">
-                <p>
-                  Evaluating generalist robot manipulation policies is costly and difficult to scale in the real world. While emerging world models (e.g., WorldEval, Ctrl-World) offer a promising alternative, the reliability of such evaluation remains a critical bottleneck.
-                  Specifically, their visual predictions can undermine policy assessment by "self-correcting" failures into false positives or yielding artifacts under out-of-distribution controls.
-                  Even with failure-enriched data, current architectures struggle to capture action-causal dynamics, as they typically treat actions as passive conditions rather than causal drivers.
-                  To address this, we propose <strong>dWorldEval</strong>, an action-centric discrete-diffusion world model that maps visual observations, language instructions, and action chunks into a shared unified token space and denoises them with a single self-attention backbone where actions function as first-class tokens.
-                  To realize reliable policy-world interaction, dWorldEval introduces a sparse keyframe memory that anchors global scene state while preserving fine-grained multi-view interaction cues, and leverages Progress-as-text to jointly generate future observations and success indicators.
-                  Extensive experiments on LIBERO, RoboTwin, and real-robot tasks demonstrate that dWorldEval significantly outperforms video diffusion baselines in action controllability, stabilizes long-horizon multi-view rollouts, enabling accurate policy ranking via automatic success estimation.
-                </p>
               </div>
             </div>
-          </li>
-          <!-- Slide 2: Overview -->
-          <li class="splide__slide">
-            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-              <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
-                <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Overview</span>
-              </h2>
-              <img src="static2/images/head.png" alt="overview" style="width: 90%; max-width: 750px; border-radius: 0.5rem;">
-              <p class="has-text-centered" style="margin-top: 1rem; color: #666; font-size: 0.95rem;">Architecture of dWorldEval</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#abstract-overview-carousel', {
-      type: 'loop',
-      perPage: 1,
-      autoplay: true,
-      interval: 8000,
-      pauseOnHover: true,
-      pagination: true,
-      arrows: true,
-      speed: 800,
-      easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-    }).mount();
-  });
-</script>
-<!-- End Abstract & Overview Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#container', {
+        perPage: 3, // Show 3 videos per view
+        perMove: 1,
+        autoplay: true,
+        rewind: true,
+        interval: 10000,
+        pagination: true, // Enable pagination
+        arrows: true, // Enable navigation arrows
+        breakpoints: {
+          768: {
+            perPage: 1 // On small screens, show 1 video per view
+          }
+        }
+      }).mount();
+    });
+  </script>
+
+  <!-- Splide JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/3.6.12/js/splide.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#container', {
+        perPage: 3, // Show 3 videos per view
+        perMove: 1,
+        autoplay: true,
+        rewind: true,
+        interval: 10000,
+        breakpoints: {
+          768: {
+            perPage: 1 // On small screens, show 1 video per view
+          }
+        }
+      }).mount();
+    });
+  </script>
 
 
-<div class="mt-8 md:ml-0 ml-1 text-left">
-  <div style="text-align: center;">
-    <h2 class="title is-3">Real Execution vs. World Model Rollouts</h2>
+  <!-- Introduction Video -->
+  <section class="hero" style="padding: 0;">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="padding: 0.5rem 0;">
+        <video id="intro-video" autoplay controls muted loop playsinline style="width: 100%; border-radius: 8px;">
+          <source src="static2/videos/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+  <!-- End introduction video -->
 
-    <!-- LIBERO Section -->
-    <h3 class="title is-8" style="color: rgb(140, 143, 144);">1. LIBERO Tasks</h3>
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 70%; margin: 0 auto;">
-    <!-- LIBERO Example 3 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header libero">Pick up the black bowl on the cookie box and place it on the plate.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31/agentview_rgb/agentview_rgb.mp4"></video>
-            <span class="video-badge real-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
-            <span class="video-badge real-badge">Wrist</span>
-          </div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31_our/episode_31_our_view_0.mp4"></video>
-            <span class="video-badge gen-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31_our/episode_31_our_view_1.mp4"></video>
-            <span class="video-badge gen-badge">Wrist</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- LIBERO Example 2 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header libero">Pick up the black bowl on the cookie box and place it on the plate.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7/agentview_rgb/agentview_rgb.mp4"></video>
-            <span class="video-badge real-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
-            <span class="video-badge real-badge">Wrist</span>
-          </div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7_our/episode_7_our_view_0.mp4"></video>
-            <span class="video-badge gen-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7_our/episode_7_our_view_1.mp4"></video>
-            <span class="video-badge gen-badge">Wrist</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- LIBERO Example 5 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header libero">Pick up bowl from center place on plate.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24/agentview_rgb/agentview_rgb.mp4"></video>
-            <span class="video-badge real-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
-            <span class="video-badge real-badge">Wrist</span>
-          </div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24_gen/demo_24_gen_view_0.mp4"></video>
-            <span class="video-badge gen-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24_gen/demo_24_gen_view_1.mp4"></video>
-            <span class="video-badge gen-badge">Wrist</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- LIBERO Example 6 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header libero">Pick up bowl next to plate place on plate.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35/agentview_rgb/agentview_rgb.mp4"></video>
-            <span class="video-badge real-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
-            <span class="video-badge real-badge">Wrist</span>
-          </div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35_gen/demo_35_gen_view_0.mp4"></video>
-            <span class="video-badge gen-badge">3rd-person</span>
-          </div>
-          <div class="video-item">
-            <video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35_gen/demo_35_gen_view_1.mp4"></video>
-            <span class="video-badge gen-badge">Wrist</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RoboTwin Section -->
-  <div style="text-align: center; margin-top: 2rem;">
-    <h3 class="title is-8" style="color: rgb(140, 143, 144);">2. RoboTwin Tasks</h3>
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 80%; margin: 0 auto;">
-    <!-- RoboTwin 1: move_can_pot clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Use one arm to pick up the can and move it to beside the pot.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 5: place_bread_skillet clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">If there is one bread on the table, use one arm to grab the bread and put it into the skillet.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 3: place_bread_basket clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">If there is one bread on the table, use one arm to grab the bread and put it in the basket.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 4: place_bread_basket clean 2 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Use two arms to simultaneously grab two breads and put them in the basket.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 6: place_container_plate clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Place the container onto the plate.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 8: place_empty_cup clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Use an arm to place the empty cup on the coaster.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 10: stack_bowls_two clean -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Stack the bowls together using two arms.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- RoboTwin 12: move_can_pot clean 2 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header robotwin">Use one arm to pick up the can and move it to beside the pot.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_left/cam_left.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_right/cam_right.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Real-World Section -->
-  <div style="text-align: center; margin-top: 2rem;">
-    <h3 class="title is-8" style="color: rgb(140, 143, 144);">3. Real-World Tasks</h3>
-  </div>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 80%; margin: 0 auto;">
-    <!-- Real 1: hammer -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Pick up the hammer, then strike the red block.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 2: handover_block -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Pass the red block to the right arm to place it on the blue mat.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 3: place_blue_cup -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Place the empty blue cup to the cup mat.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 4: sprite_coke -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Pick up one bottle with one arm, and pick up another bottle with the other arm.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 5: bussing_table 140 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 6: bussing_table 178 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 7: bussing_table 198 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 8: bussing_table 5 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 9: bussing_table 168 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 10: bussing_table 37 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 11: bussing_table 80 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-    <!-- Real 12: bussing_table 19 -->
-    <div class="video-card" style="flex: 0 0 47%;">
-      <div class="instruction-header realworld">Clean the table.</div>
-      <div class="video-section">
-        <div class="section-label real">Real Execution</div>
-        <div class="video-row">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_high/cam_high.mp4"></video><span class="video-badge real-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span class="video-badge real-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span class="video-badge real-badge">Right</span></div>
-        </div>
-        <div class="section-label gen">Generated Rollout</div>
-        <div class="video-row" style="margin-bottom: 0;">
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span class="video-badge gen-badge">Top</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span class="video-badge gen-badge">Left</span></div>
-          <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span class="video-badge gen-badge">Right</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="hero teaser" style="padding-bottom: 4rem;">
-  <div style="text-align: center; margin-bottom: 20px; margin-top: 40px;">
-    <h2 class="title is-3">Experimental Results</h2>
-  </div>
-  <div class="container" style="max-width: 900px; padding-bottom: 2rem;">
-    <div id="results-carousel" class="splide" style="margin-bottom: 2rem;">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <!-- Slide 1: Correlation -->
-          <li class="splide__slide">
-            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
-              <img style="width: 75%; max-width: 600px;" src="static2/images/corr.png" alt="correlation" />
-              <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">Real vs. dWorldEval success rates.</h2>
-            </div>
-          </li>
-          <!-- Slide 2: Two charts -->
-          <li class="splide__slide">
-            <div style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-              <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 2rem;">
-                <div style="flex: 1; text-align: center;">
-                  <img style="width: 100%;" src="static2/images/delta_lpips.png" alt="delta_lpips" />
-                  <h2 class="subtitle has-text-centered" style="font-size: 0.95rem;">Action controllability: dWorldEval vs. Baselines.</h2>
-                </div>
-                <div style="flex: 1; text-align: center;">
-                  <img style="width: 100%;" src="static2/images/horizon.png" alt="horizon" />
-                  <h2 class="subtitle has-text-centered" style="font-size: 0.95rem;">Spatiotemporal Consistency: dWorldEval vs. Baselines</h2>
+  <!-- Abstract & Overview Carousel -->
+  <section class="section"
+    style="padding: 3.5rem 1.5rem; margin: 1.5rem 0; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);">
+    <div class="container" style="max-width: 900px;">
+      <div id="abstract-overview-carousel" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <!-- Slide 1: Abstract -->
+            <li class="splide__slide">
+              <div
+                style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
+                  <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Abstract</span>
+                </h2>
+                <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.8; color: #4a4a4a;">
+                  <p>
+                    Evaluating generalist robot manipulation policies is costly and difficult to scale in the real
+                    world. While emerging world models (e.g., WorldEval, Ctrl-World) offer a promising alternative, the
+                    reliability of such evaluation remains a critical bottleneck.
+                    Specifically, their visual predictions can undermine policy assessment by "self-correcting" failures
+                    into false positives or yielding artifacts under out-of-distribution controls.
+                    Even with failure-enriched data, current architectures struggle to capture action-causal dynamics,
+                    as they typically treat actions as passive conditions rather than causal drivers.
+                    To address this, we propose <strong>dWorldEval</strong>, an action-centric discrete-diffusion world
+                    model that maps visual observations, language instructions, and action chunks into a shared unified
+                    token space and denoises them with a single self-attention backbone where actions function as
+                    first-class tokens.
+                    To realize reliable policy-world interaction, dWorldEval introduces a sparse keyframe memory that
+                    anchors global scene state while preserving fine-grained multi-view interaction cues, and leverages
+                    Progress-as-text to jointly generate future observations and success indicators.
+                    Extensive experiments on LIBERO, RoboTwin, and real-robot tasks demonstrate that dWorldEval
+                    significantly outperforms video diffusion baselines in action controllability, stabilizes
+                    long-horizon multi-view rollouts, enabling accurate policy ranking via automatic success estimation.
+                  </p>
                 </div>
               </div>
+            </li>
+            <!-- Slide 2: Overview -->
+            <li class="splide__slide">
+              <div
+                style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h2 class="title is-3 has-text-centered" style="color: #363636; margin-bottom: 1.5rem;">
+                  <span style="border-bottom: 3px solid #3273dc; padding-bottom: 0.3rem;">Overview</span>
+                </h2>
+                <img src="static2/images/head.png" alt="overview"
+                  style="width: 90%; max-width: 750px; border-radius: 0.5rem;">
+                <p class="has-text-centered" style="margin-top: 1rem; color: #666; font-size: 0.95rem;">Architecture of
+                  dWorldEval</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#abstract-overview-carousel', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+        interval: 8000,
+        pauseOnHover: true,
+        pagination: true,
+        arrows: true,
+        speed: 800,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+      }).mount();
+    });
+  </script>
+  <!-- End Abstract & Overview Carousel -->
+
+
+  <div class="mt-8 md:ml-0 ml-1 text-left">
+    <div style="text-align: center;">
+      <h2 class="title is-3">Real Execution vs. World Model Rollouts</h2>
+
+      <!-- LIBERO Section -->
+      <h3 class="title is-8" style="color: rgb(140, 143, 144);">1. LIBERO Tasks</h3>
+    </div>
+
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 70%; margin: 0 auto;">
+      <!-- LIBERO Example 3 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header libero">Pick up the black bowl on the cookie box and place it on the plate.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31/agentview_rgb/agentview_rgb.mp4"></video>
+              <span class="video-badge real-badge">3rd-person</span>
             </div>
-          </li>
-        </ul>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
+              <span class="video-badge real-badge">Wrist</span>
+            </div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31_our/episode_31_our_view_0.mp4"></video>
+              <span class="video-badge gen-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_31_our/episode_31_our_view_1.mp4"></video>
+              <span class="video-badge gen-badge">Wrist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIBERO Example 2 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header libero">Pick up the black bowl on the cookie box and place it on the plate.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7/agentview_rgb/agentview_rgb.mp4"></video>
+              <span class="video-badge real-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
+              <span class="video-badge real-badge">Wrist</span>
+            </div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7_our/episode_7_our_view_0.mp4"></video>
+              <span class="video-badge gen-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/fspa=pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate/episode_7_our/episode_7_our_view_1.mp4"></video>
+              <span class="video-badge gen-badge">Wrist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIBERO Example 5 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header libero">Pick up bowl from center place on plate.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24/agentview_rgb/agentview_rgb.mp4"></video>
+              <span class="video-badge real-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
+              <span class="video-badge real-badge">Wrist</span>
+            </div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24_gen/demo_24_gen_view_0.mp4"></video>
+              <span class="video-badge gen-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24_gen/demo_24_gen_view_1.mp4"></video>
+              <span class="video-badge gen-badge">Wrist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIBERO Example 6 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header libero">Pick up bowl next to plate place on plate.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35/agentview_rgb/agentview_rgb.mp4"></video>
+              <span class="video-badge real-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35/eye_in_hand_rgb/eye_in_hand_rgb.mp4"></video>
+              <span class="video-badge real-badge">Wrist</span>
+            </div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35_gen/demo_35_gen_view_0.mp4"></video>
+              <span class="video-badge gen-badge">3rd-person</span>
+            </div>
+            <div class="video-item">
+              <video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/libero/sspa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate/demo_35_gen/demo_35_gen_view_1.mp4"></video>
+              <span class="video-badge gen-badge">Wrist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RoboTwin Section -->
+    <div style="text-align: center; margin-top: 2rem;">
+      <h3 class="title is-8" style="color: rgb(140, 143, 144);">2. RoboTwin Tasks</h3>
+    </div>
+
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 80%; margin: 0 auto;">
+      <!-- RoboTwin 1: move_can_pot clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Use one arm to pick up the can and move it to beside the pot.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_3_gen/episode_3_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 5: place_bread_skillet clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">If there is one bread on the table, use one arm to grab the bread and
+          put it into the skillet.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_skillet/clean/episode_8_gen/episode_8_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 3: place_bread_basket clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">If there is one bread on the table, use one arm to grab the bread and
+          put it in the basket.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_0_gen/episode_0_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 4: place_bread_basket clean 2 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Use two arms to simultaneously grab two breads and put them in the
+          basket.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_bread_basket/clean/episode_15_gen/episode_15_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 6: place_container_plate clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Place the container onto the plate.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_container_plate/clean/episode_10_gen/episode_10_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 8: place_empty_cup clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Use an arm to place the empty cup on the coaster.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/place_empty_cup/clean/episode_1_gen/episode_1_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 10: stack_bowls_two clean -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Stack the bowls together using two arms.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/stack_bowls_two/clean/episode_11_gen/episode_11_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- RoboTwin 12: move_can_pot clean 2 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header robotwin">Use one arm to pick up the can and move it to beside the pot.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_left/cam_left.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16/cam_right/cam_right.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/robotwin/move_can_pot/clean/episode_16_gen/episode_16_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Real-World Section -->
+    <div style="text-align: center; margin-top: 2rem;">
+      <h3 class="title is-8" style="color: rgb(140, 143, 144);">3. Real-World Tasks</h3>
+    </div>
+
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1.5rem; padding: 1rem; max-width: 80%; margin: 0 auto;">
+      <!-- Real 1: hammer -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Pick up the hammer, then strike the red block.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/hammer/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 2: handover_block -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Pass the red block to the right arm to place it on the blue mat.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/handover_block/episode_94_decompressed_gen/episode_94_decompressed_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 3: place_blue_cup -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Place the empty blue cup to the cup mat.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/place_blue_cup/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 4: sprite_coke -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Pick up one bottle with one arm, and pick up another bottle with the
+          other arm.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_0.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_1.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/simple_env_test_2_chunk_2_gap_cycle=False_gen_multi=True_ts=24/sprite_coke/episode_21_decompressed_gen/episode_21_decompressed_gen_view_2.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 5: bussing_table 140 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_140_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 6: bussing_table 178 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_178_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 7: bussing_table 198 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_198_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 8: bussing_table 5 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250818_sampled_episode_5_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 9: bussing_table 168 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_168_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 10: bussing_table 37 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_37_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 11: bussing_table 80 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250819_sampled_episode_80_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Real 12: bussing_table 19 -->
+      <div class="video-card" style="flex: 0 0 47%;">
+        <div class="instruction-header realworld">Clean the table.</div>
+        <div class="video-section">
+          <div class="section-label real">Real Execution</div>
+          <div class="video-row">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_high/cam_high.mp4"></video><span
+                class="video-badge real-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_left_wrist/cam_left_wrist.mp4"></video><span
+                class="video-badge real-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_right_wrist/cam_right_wrist.mp4"></video><span
+                class="video-badge real-badge">Right</span></div>
+          </div>
+          <div class="section-label gen">Generated Rollout</div>
+          <div class="video-row" style="margin-bottom: 0;">
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_high_gen/cam_high_gen.mp4"></video><span
+                class="video-badge gen-badge">Top</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_left_wrist_gen/cam_left_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Left</span></div>
+            <div class="video-item"><video controls webkit-playsinline playsinline loop autoplay muted
+                src="static2/videos/real/realworld_bussing_bckup/bussing_table_worldeval_zjx_20250820_sampled_episode_19_decompressed/cam_right_wrist_gen/cam_right_wrist_gen.mp4"></video><span
+                class="video-badge gen-badge">Right</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#results-carousel', {
-      type: 'loop',
-      perPage: 1,
-      autoplay: true,
-      interval: 6000,
-      pauseOnHover: true,
-      pagination: true,
-      arrows: true,
-      speed: 800,
-      easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
-    }).mount();
-  });
-</script>
+  <section class="hero teaser" style="padding-bottom: 4rem;">
+    <div style="text-align: center; margin-bottom: 20px; margin-top: 40px;">
+      <h2 class="title is-3">Experimental Results</h2>
+    </div>
+    <div class="container" style="max-width: 900px; padding-bottom: 2rem;">
+      <div id="results-carousel" class="splide" style="margin-bottom: 2rem;">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <!-- Slide 1: Correlation -->
+            <li class="splide__slide">
+              <div
+                style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center;">
+                <img style="width: 75%; max-width: 600px;" src="static2/images/corr.png" alt="correlation" />
+                <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">Real vs. dWorldEval success rates.</h2>
+              </div>
+            </li>
+            <!-- Slide 2: Two charts -->
+            <li class="splide__slide">
+              <div
+                style="background: white; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <div
+                  style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 2rem;">
+                  <div style="flex: 1; text-align: center;">
+                    <img style="width: 100%;" src="static2/images/delta_lpips.png" alt="delta_lpips" />
+                    <h2 class="subtitle has-text-centered" style="font-size: 0.95rem;">Action controllability:
+                      dWorldEval vs. Baselines.</h2>
+                  </div>
+                  <div style="flex: 1; text-align: center;">
+                    <img style="width: 100%;" src="static2/images/horizon.png" alt="horizon" />
+                    <h2 class="subtitle has-text-centered" style="font-size: 0.95rem;">Spatiotemporal Consistency:
+                      dWorldEval vs. Baselines</h2>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!--BibTex citation -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <!-- <pre><code>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      new Splide('#results-carousel', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+        interval: 6000,
+        pauseOnHover: true,
+        pagination: true,
+        arrows: true,
+        speed: 800,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+      }).mount();
+    });
+  </script>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- <pre><code>
       @misc{li2025worldevalworldmodelrealworld,
       title={WorldEval: World Model as Real-World Robot Policies Evaluator}, 
       author={Yaxuan Li and Yichen Zhu and Junjie Wen and Chaomin Shen and Yi Xu},
@@ -1058,82 +1359,98 @@
       primaryClass={cs.RO},
       url={https://arxiv.org/abs/2505.19017}, }
     </code></pre> -->
-  </div>
-</section>
+    </div>
+  </section>
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code -->
 
-<!-- End of Statcounter Code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-  </body>
-  </html>
-  <style>
-    .container {
-        max-width: 80%;
-        margin: auto;
-    }
-    .video-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 30px;
-    }
-    .video-item {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 20px; /* 增加每个视频项之间的间距 */
-    }
-    .description {
-        width: 50%;
-        background-color: #ebf8ff;
-        padding: 15px;
-        border-radius: 5px;
-        margin-right: 20px;
-        margin-bottom: 20px; /* 增加描述框之间的间距 */
-    }
-    .video-container {
-        width: 45%;
-        position: relative;
-    }
-    video, img {
-        width: 100%;
-        border-radius: 8px;
-    }
-        .label {
-        position: absolute;
-        padding: 2px 5px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 3px;
-        font-size: 12px;
-    }
-    .top-left {
-        top: 5px;
-        left: 5px;
-    }
-    .bottom-right {
-        bottom: 5px;
-        right: 5px;
-    }
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
+<style>
+  .container {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .video-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    /* 增加每个视频项之间的间距 */
+  }
+
+  .description {
+    width: 50%;
+    background-color: #ebf8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* 增加描述框之间的间距 */
+  }
+
+  .video-container {
+    width: 45%;
+    position: relative;
+  }
+
+  video,
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .label {
+    position: absolute;
+    padding: 2px 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    font-size: 12px;
+  }
+
+  .top-left {
+    top: 5px;
+    left: 5px;
+  }
+
+  .bottom-right {
+    bottom: 5px;
+    right: 5px;
+  }
 </style>
